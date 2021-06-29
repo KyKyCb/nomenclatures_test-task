@@ -1,0 +1,19 @@
+
+
+.App {
+  width: 1200px;
+  height: 400px;
+  margin: 0 auto;
+  text-align: center;
+  font-family: 'SF UI Display';
+
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  background-color: rgb(240, 240, 240);
+  .App__content{
+    width: 100%;
+    text-align: start;
+  }
+}
+

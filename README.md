@@ -1,3 +1,9 @@
+# Before start!
+
+1.This project use fetch request to the local webserver. Please move *back.php* to main folder of your local domain.
+2.Create new DB in MySQL. Use SQL scripts from *'project-name'/back-end/* to create new tables.
+3.In *back.php* change your private data (link, name, password etc.) for connect to your MySQL server.
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

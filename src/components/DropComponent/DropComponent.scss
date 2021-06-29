@@ -1,0 +1,134 @@
+
+.nomenclature__item-selection{
+position: relative;
+display: flex;
+flex-direction: column;
+justify-content: space-around;
+align-self: flex-start;
+align-items: center;
+
+box-sizing: border-box;
+
+width: 258px;
+height: 30px;
+padding: 0 20px;
+
+background: #FFFFFF;
+border-radius: 30px;
+
+font-style: normal;
+font-weight: 500;
+font-size: 12px;
+line-height: 14px;
+
+cursor: pointer;
+
+color: #2C2C2C;
+transition: box-shadow ease-in-out 200ms;
+&:hover{
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+}
+&.__active {
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    box-shadow: none;
+    span:nth-child(2){
+    img{
+        transform: rotate(180deg);
+    }
+    
+    }
+    .selection_sub{
+    z-index: 2;
+    display: block;
+    animation: showWindow forwards 200ms;
+    }
+}
+.selection_main{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    span{
+    
+    display: block;
+    }
+    span:nth-child(1){
+    width: 80%;
+    text-align: start;
+    }
+    span:nth-child(2){
+    width: 20%;
+    text-align: end;
+    img{
+        transition: transform ease-in-out 200ms
+    }
+    }
+}
+.selection_sub{
+    
+
+    box-sizing: border-box;
+    
+    transform: translate(0, -30px);
+    opacity: 0;
+    width: 258px;
+    height: 150px;
+    display: none;
+    padding: 0 5px 15px 0;
+    
+    background: #FFFFFF;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 14px;
+
+    text-align: start;
+    position: absolute;
+    left: 0;
+    top: 30px;
+    .selection_items{
+    height: 100%;
+    overflow-y: scroll;
+    &::-webkit-scrollbar {
+        width: 3px;
+    }
+        
+    &::-webkit-scrollbar-track {
+        box-shadow: none;
+    }
+        
+    &::-webkit-scrollbar-thumb {
+        background: #E0E9F2;
+        border-radius: 15px;
+    }
+    p{
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+
+        height: 20px;
+        margin: 3.5px 0;
+        padding-left: 20px;
+        margin-right: 10px;
+    }
+    p:hover{
+        background: #F3F8FC;
+        border-radius: 0px 10px 10px 0px;
+    }
+    }
+}
+}
+  
+@keyframes showWindow{
+100%{
+    opacity: 1;
+    transform: translate(0,0);
+}
+}
